@@ -24,10 +24,16 @@ int main()
     for(int i=0; i<n/2; i++)
     {
         // using 3rd temprory variable
-        int temp; 
-        temp = arr[i];     
-        arr[i]=arr[n-i-1];    
-        arr[n-i-1]=temp;          
+        // int temp; 
+        // temp = arr[i];     
+        // arr[i]=arr[n-i-1];    
+        // arr[n-i-1]=temp;      
+
+        // without using third variable
+        arr[i]=arr[i]+arr[n-i-1];  
+        arr[n-i-1]=arr[i]-arr[n-i-1];
+        arr[i]=arr[i]-arr[n-i-1]; 
+
     }
     for(int i=0; i<n; i++)
     {
